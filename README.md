@@ -10,12 +10,6 @@ Because of that, this tool takes monthly Excel exports and turns them into Koito
 
 This is designed for workbook files named like `May 2021 Play History.xlsx`. The name comes from the playlist name I manually create/type.
 
-## Limitations
-
-Since the playlist export isn't a true "play history" export, we're missing a played timestamp. My approach was to simply select a random time within that month. It's not perfect, but the best we can do until Roon exposes this information from the API natively.
-
-Further, we're missing a semblance of "time played". The full Roon page includes % played, but that isn't included in the playlist export. As such, we just assume every item in the list was a full play.
-
 ## Usage
 
 ```sh
@@ -34,6 +28,12 @@ python3 roon2koito.py "May 2021 Play History.xlsx"
 ```
 
 Output goes to `output/Streaming_History_Audio_<year>_0.json`.
+
+## Limitations
+
+Since the playlist export isn't a true "play history" export, we're missing a played timestamp. My approach was to simply select a random time within that month. It's not perfect, but the best we can do until Roon exposes this information from the API natively.
+
+Further, we're missing a semblance of "time played". The full Roon page includes % played, but that isn't included in the playlist export. As such, we just assume every item in the list was a full play.
 
 ## Notes
 
