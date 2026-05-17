@@ -1,4 +1,4 @@
-output/
+output/*.json
 *.log
 .DS_Store
 __pycache__/
