@@ -2,13 +2,13 @@
 
 Convert monthly Roon Excel exports into Koito-importable Spotify Extended Streaming History JSON.
 
-Roon clearly has a real `My History` view, but that data is not exposed through Roon's public extension API in a way that is practical to export reliably.
+Roon has a `My History` tab, which clearly shows that the data IS stored in the DB. However, that data is not exposed through Roon's public extension API.
 
 ![Roon My History](history.png)
 
-Because of that, this tool takes monthly Excel exports and turns them into Koito import files instead of trying to scrape Roon's private internals. The Excel exports are made by creating a playlist of each month's play history manually in Roon and then exporting the playlist.
+Because of the lack of API support, this tool accepts manually generated monthly Excel exports and turns them into files that Koito can understand for importing. The Excel exports are made by creating a playlist of each month's play history manually in Roon and then exporting the playlist (idea from [this thread](https://community.roonlabs.com/t/is-there-a-way-to-export-roon-history/8665/11)).
 
-This is designed for workbook files named like `May 2021 Play History.xlsx`. The name comes from the playlist name I manually create/type.
+The script expects the monthly Excel reports to be in the format: `May 2021 Play History.xlsx`. The name comes from the playlist name I manually type when creating them.
 
 ## Usage
 
