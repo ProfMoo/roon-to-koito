@@ -12,7 +12,9 @@ This is designed for workbook files named like `May 2021 Play History.xlsx`. The
 
 ## Limitations
 
-Since the playlist export isn't a true "play history" export, we are missing a played timestamp. My approach was to simply select a random time within that month. It's not perfect, but the best we can do until Roon exposes this information from the API natively.
+Since the playlist export isn't a true "play history" export, we're missing a played timestamp. My approach was to simply select a random time within that month. It's not perfect, but the best we can do until Roon exposes this information from the API natively.
+
+Further, we're missing a semblance of "time played". The full Roon page includes % played, but that isn't included in the playlist export. As such, we just assume every item in the list was a full play.
 
 ## Usage
 
